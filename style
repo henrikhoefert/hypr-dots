@@ -6,11 +6,9 @@ if [[ $1 == "--background" ]]; then
 
 	if command -v magick >/dev/null 2>&1 ; then
 
-		hyprctl hyprpaper unload all
 		magick $image_source $background_cache
 		sudo mv $background_cache $background
-		hyprctl hyprpaper preload "$background"
-		hyprctl hyprpaper wallpaper ",$background"
+		feh --bg-scale $backgound
 
 	else
 		echo "ERROR: Imagemagick not found"
