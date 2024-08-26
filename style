@@ -1,0 +1,40 @@
+#!/bin/bash
+if [[ $1 == "--background" ]]; then
+	image_source=$2
+	background_cache=.background.png
+	background=/usr/share/backgrounds/background.png
+
+	if command -v magick >/dev/null 2>&1 ; then
+
+		hyprctl hyprpaper unload all
+		magick $image_source $background_cache
+		sudo mv $background_cache $background
+		hyprctl hyprpaper preload "$background"
+		hyprctl hyprpaper wallpaper ",$background"
+
+	else
+		echo "ERROR: Imagemagick not found"
+	fi
+elif [[ $1 == "--face" ]]; then
+	image_source=$2
+	image_cache=.cache_$image_source.png
+	image_output=$USER.face.icon
+	face=$USER.face.icon
+ 
+	image_info=$(identify $image_source)
+	image_size=$(echo $image_info | awk '{print $3}')
+	image_width=$(echo $image_size | awk -F 'x' '{print $1}')
+	image_height=$(echo $image_size | awk -F 'x' '{print $2}')
+
+	if [[ $image_width > $image_height ]]; then
+		side=$image_height
+	elif [[ $image_height > $image_width ]]; then
+		side=$image_width
+	fi
+
+	magick $image_source $image_cache
+	magick $image_cache -gravity Center -crop "$side\x$side+0+0" +repage $image_cache
+
+	mv $image_cache ~/.face
+	ln ~/.face ~/.face.icon
+fi
