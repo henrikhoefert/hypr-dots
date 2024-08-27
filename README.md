@@ -19,5 +19,8 @@
 | slurp          |
 | imagemagick    |
 | wl-clipboard   |
+| brightnessctl  |
+| playerctl      |
+| pamixer        |
  
 fonts: ttf-noto-nerd noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra
