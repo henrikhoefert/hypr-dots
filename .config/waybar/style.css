@@ -25,7 +25,7 @@ window#waybar {
 
 #workspaces button {
 	padding: 0 2px;
-	color: #fdf6e3;
+	color: #64727D;
 }
 #workspaces button:hover {
 	background: #1a1a1a;
@@ -33,7 +33,7 @@ window#waybar {
 	padding: 0 3px;
 }
 #workspaces button.active {
-	color: #64727D;
+	color: #fdf6e3;
 
 }
 
