@@ -3,16 +3,11 @@ if [[ $1 == "--background" ]]; then
 	image_source=$2
 	background=~/.background.png
 
-	if command -v magick >/dev/null 2>&1 ; then
+	hyprctl hyprpaper unload all
+	magick $image_source $background
+	hyprctl hyprpaper preload "$background"
+	hyprctl hyprpaper wallpaper ",$background"
 
-		hyprctl hyprpaper unload all
-		magick $image_source $background
-		hyprctl hyprpaper preload "$background"
-		hyprctl hyprpaper wallpaper ",$background"
-
-	else
-		echo "ERROR: Imagemagick not found"
-	fi
 elif [[ $1 == "--face" ]]; then
 	image_source=$2
 	image_cache=.cache_$image_source.png
@@ -36,4 +31,7 @@ elif [[ $1 == "--face" ]]; then
 	mv $image_cache ~/.face
 	sudo cp ~/.face /usr/share/sddm/faces/$USER.face.icon
 	ln ~/.face ~/.face.icon
+else
+	echo "usage: style --background <img>"
+	echo "usage: style --face <img>"
 fi
