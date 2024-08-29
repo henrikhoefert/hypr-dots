@@ -79,7 +79,7 @@
 	},
 	"memory": {
 		"interval": 5,
-		"format": "🖫{}%"
+		"format": "🖫 {}%"
 	},
 	"cpu": {
 		"interval": 5,
@@ -91,6 +91,8 @@
 			"warning": 30,
 			"critical": 15
 		},
+		"format-charging": " {icon} {capacity}%",
+		"format-discharging":"{icon} {capacity}%",
 		"format": "{icon} {capacity}%",
 		"format-icons": [
 			"",
@@ -109,7 +111,7 @@
 		"icon-size": 20
 	},
 	"network": {
-                   "format-wifi": "{essid} ({signalStrength}%) 󰖩",
+                   "format-wifi": "{essid} {signalStrength}% 󰖩 ",
                    "format-ethernet": "󰈁{bandwidthUpBytes}{bandwidthDownBytes}",
                    "format-disconnected": "󱚼",
                    "max-length": 50,
