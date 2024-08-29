@@ -63,7 +63,7 @@
 	},
 
 	"pulseaudio": {
-		"format": "{icon} {volume:2}%",
+		"format": "{icon}  {volume:2}%",
 		"format-bluetooth": "{icon}  {volume}%",
 		"format-muted": "MUTE",
 		"format-icons": {
@@ -79,11 +79,11 @@
 	},
 	"memory": {
 		"interval": 5,
-		"format": "🖫 {}%"
+		"format": " {}%"
 	},
 	"cpu": {
 		"interval": 5,
-		"format": "🖥{usage:2}%"
+		"format": "{usage:2}%"
 	},
 	"battery": {
 		"states": {
@@ -104,16 +104,16 @@
 	},
 	"disk": {
 		"interval": 5,
-		"format": "🖴{percentage_used:2}%",
+		"format": "{percentage_used:2}%",
 		"path": "/"
 	},
 	"tray": {
 		"icon-size": 20
 	},
 	"network": {
-                   "format-wifi": "{essid} {signalStrength}% 󰖩 ",
+                   "format-wifi": "󰖩 {essid} {signalStrength}%",
                    "format-ethernet": "󰈁{bandwidthUpBytes}{bandwidthDownBytes}",
-                   "format-disconnected": "󱚼",
+                   "format-disconnected": "󱚼 ",
                    "max-length": 50,
                    "on-click": "kitty -e 'nmtui'"
         }
