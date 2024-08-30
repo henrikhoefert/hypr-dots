@@ -34,7 +34,9 @@ window#waybar {
 }
 #workspaces button.active {
 	color: #fdf6e3;
-
+}
+#workspaces button.urgent {
+        color: #ad175d;
 }
 
 #pulseaudio {
