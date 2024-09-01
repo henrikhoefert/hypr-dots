@@ -8,7 +8,6 @@ window#waybar {
 	color: #fdf6e3;
 }
 
-
 #workspaces,
 #clock.1,
 #clock.2,
@@ -27,16 +26,14 @@ window#waybar {
 	padding: 0 2px;
 	color: #64727D;
 }
-#workspaces button:hover {
-	background: #1a1a1a;
-	border: #1a1a1a;
-	padding: 0 3px;
-}
 #workspaces button.active {
 	color: #fdf6e3;
 }
+#workspaces button:hover {
+	color: #000000;
+}
 #workspaces button.urgent {
-        color: #ad175d;
+	color: #ad175d;
 }
 
 #pulseaudio {
@@ -60,6 +57,7 @@ window#waybar {
 #clock,
 #pulseaudio,
 #memory,
+#network,
 #cpu,
 #battery,
 #disk {
