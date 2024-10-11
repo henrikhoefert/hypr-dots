@@ -1,0 +1,10 @@
+#!/bin/bash
+
+name=$(date +"%Y-%m-%d")
+target=$1
+out=~/Documents/rom.iso
+
+mkisofs -V $name -J -r -o $out $target
+echo BACKUP: \'$target\' created!
+xorriso -as cdrecord -v -sao dev=/dev/sr0 $out
+echo DONE!
