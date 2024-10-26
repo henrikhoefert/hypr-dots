@@ -1,7 +1,7 @@
-browser mpv
-#browser
-macro b set browser librewolf    ; open-in-browser                  ; set browser mpv
+browser "mpv %u >/dev/null &"
+#librewolf
+macro b set browser librewolf    ; open-in-browser                  ; set browser "mpv %u >/dev/null &"
 #yank
-macro y set browser "wl-copy %u" ; open-in-browser-noninteractively ; set browser mpv
+macro y set browser "wl-copy %u" ; open-in-browser-noninteractively ; set browser "mpv %u >/dev/null &"
 #yt-dlp
-macro d set browser "yt-dlp -o '~/Videos/%(title)s.%(ext)s' '%u'" ; open-in-browser-noninteractively ; set browser mpv
+macro d set browser "yt-dlp -o '~/Videos/%(title)s.%(ext)s' '%u'" ; open-in-browser-noninteractively ; set browser "mpv %u >/dev/null &"
