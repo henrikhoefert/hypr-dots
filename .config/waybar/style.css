@@ -4,7 +4,7 @@
 }
 
 window#waybar {
-	background-color: transparent;
+	background-color: rgba(0,0,0,0.5);
 	color: #fdf6e3;
 }
 
@@ -19,7 +19,7 @@ window#waybar {
 #battery,
 #disk,
 #tray {
-	background: #1a1a1a;
+	background: transparent;
 }
 
 #workspaces button {
@@ -62,20 +62,4 @@ window#waybar {
 #battery,
 #disk {
 	padding: 0 10px;
-}
-#custom-right-arrow-dark{
-	color: #1a1a1a;
-	font-size:30px;
-}
-#custom-left-arrow-dark {
-	color: #1a1a1a;
-	font-size:30px;
-}
-#custom-right-arrow-light{
-	font-size:18px;
-	color: #292b2e;
-}
-#custom-left-arrow-light {
-	color: #292b2e;
-	font-size:18px;
 }
