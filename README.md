@@ -2,25 +2,17 @@
 
 ----------------------------------------------
 
-| program        |
-|----------------|
-| kitty          |
-| hyprland       |
-| hyprlock       |
-| hypridle       |
-| hyprpaper      |
-| wofi           |
-| waybar         |
-| librewolf      |
-| ranger         |
-| mpv            |
-| swappy         |
-| grim           |
-| slurp          |
-| imagemagick    |
-| wl-clipboard   |
-| brightnessctl  |
-| playerctl      |
-| pamixer        |
- 
-fonts: ttf-noto-nerd noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra
+```
+sudo pacman -S --needed hyprland hyprlock hypridle hyprpaper wofi waybar
+```
+```
+sudo pacman -S --needed \
+xorg-xwayland \
+python-pyqt5 qt5-base qt5-wayland \
+gvfs gvfs-smb \
+pamixer playerctl \
+swappy grim slurp imagemagick \
+wl-clipboard \
+gnome-keyring \
+imv
+```
