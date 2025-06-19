@@ -1,0 +1,10 @@
+#!/bin/bash
+
+if [ -z "$1" ]; then
+	echo "missing argument"
+else
+	sudo cryptsetup luksOpen $1 drive
+	mkdir -p /media/drive
+	sudo mount /dev/mapper/drive /media/drive
+	chown -R $SUDO_USER /media/drive
+fi
