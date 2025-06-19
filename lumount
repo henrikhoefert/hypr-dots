@@ -1,0 +1,6 @@
+#!/bin/bash
+
+sudo umount /media/drive
+sudo cryptsetup luksClose drive
+rm -f ~/luks
+rm -rf /media/drive
